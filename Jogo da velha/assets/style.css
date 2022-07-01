@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #202124;
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * 0.9);
+  
+}
+
+body{
+    background: var(--background);
+    
+}
+
+header{
+
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 60px 90px 60px;
+}
+
+main.end{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+
+
+.board{
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+
+
+}
+
+.cell{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+    position: relative;
+}
+
+.cell:nth-child(3n + 1){
+
+    border-left: none;
+
+
+}
+
+.cell:nth-child(1n+7){
+
+    border-bottom: none;
+}
+
+/* Elemento de X */
+
+.board.x .cell:not(.x):not(.o):hover::before,/* hover */
+.board.x .cell:not(.x):not(.o):hover::after,
+.cell.x::before,/* elemento x geral e as angulações */
+.cell.x::after{
+
+    content: "";
+    height: var(--mark-size);
+    width: calc(var(--mark-size) * 0.15);
+    background-color: crimson;
+    position: absolute;
+
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.cell.x::before{
+    
+    transform: rotate(45deg);
+}
+
+.board.x .cell:not(.x):not(.o):hover::after,
+.cell.x::after{
+    
+    transform: rotate(-45deg);
+}
+
+/* Circulo */
+
+
+/* elemento do circulo */
+.board.o .cell:not(.x):not(.o):hover::before{/* hover */
+    opacity: 0.7;
+}
+
+
+.board.o .cell:not(.x):not(.o):hover::before,/* hover */
+.board.o .cell:not(.x):not(.o):hover::after,
+.cell.o::before,/* elemento o geral e os borders */
+.cell.o::after{
+
+    content: "";
+    background-color: crimson;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+
+.board.o .cell:not(.x):not(.o):hover::before,/* hover */
+.cell.o::before{
+    
+    height: calc(var(--mark-size)*0.9);
+    width: calc(var(--mark-size)*0.9);
+}
+.board.o .cell:not(.x):not(.o):hover::after,/* hover */
+.cell.o::after{
+    
+    height: calc(var(--mark-size)*0.5);
+    width: calc(var(--mark-size)*0.5);
+    background: var(--background);
+}
+
+
+.board.x .cell:not(.x):not(.o):hover::before,/* hover */
+.board.x .cell:not(.x):not(.o):hover::after{
+    opacity: 0.7;
+}
+.cell.o,
+.cell.x{
+cursor: not-allowed;
+}
+
+/* fim do jogo da velha */
+
+.game_end_mensage{
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    position: fixed;
+    background-color: var(--background);
+    opacity: 0.9;
+    color: white;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+}
+
+.game_end_mensage.show{
+
+    display: flex;
+}
+
+
+.game_end_mensage span{
+    color: red;
+    
+}
+
+.game_end_mensage button{
+
+
+    font-size: 24px;
+
+    background-color: var(--background);
+    color: red;
+    border: 1px solid red;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 9px;
+    
+}
+
+.game_end_mensage button:hover{
+
+    cursor: pointer;
+    filter: brightness(130%);
+}
+
+

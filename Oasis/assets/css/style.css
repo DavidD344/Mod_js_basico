@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400&family=Poppins:wght@300;500;600;700&display=swap');
+
+/* font-family: 'Exo', sans-serif; 300 400
+font-family: 'Poppins', sans-serif;  300 500 600 700*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
+e 10px de altura para a barra horizontal */
+::-webkit-scrollbar {
+width:8px;
+height: 8px;
+
+}
+    
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+    
+/* aqui é a alça da barra, que demonstra a altura que você está na página
+estou colocando uma cor azul clara nela*/
+::-webkit-scrollbar-thumb {
+background: var(--maincolor);
+border-radius: 15px;
+}
+
+:root{
+
+    --background: #121212;
+    --maincolor: #00E733; 
+    /* --maincolorrgb: rgb(9, 215, 95); */
+}
+
+body{
+    background: var(--background);
+
+}
+.navigation a{color: #dddddd;}
+.navigation{
+    position: fixed;
+    top: 0;
+    height: 11vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
+    background-color: var(--background);
+  
+    z-index: 99;
+
+
+    box-shadow: 0px 9px 71px -20px var(--maincolor);
+-webkit-box-shadow: 0px 9px 71px -20px var(--maincolor);
+-moz-box-shadow: 0px 9px 71px -20px var(--maincolor); 
+
+}
+
+
+.brand a{
+    font-family: 'Exo', sans-serif;
+    font-size: 38px;
+    text-decoration: none;
+}
+.brand::first-letter{
+    color: var(--maincolor);
+    
+   
+}
+
+
+.nav_bar{
+    width: 60%;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.nav_bar a{
+    text-decoration: none;}
+.nav_bar li{
+    list-style: none;}
+
+.nav_list{
+
+    height: 100%;
+    width: 80%;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.icons{
+    height: 100%;
+    width: 20%;
+    background-color: var(--maincolor);
+
+}
+
+/* Final da barra de navegação */
+.start_section{
+
+    margin-top: 11vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    height: 85vh;
+    align-items: center;
+    display: flex;
+    
+   
+}
+
+.start_content{
+
+    width: 60%;
+
+}
+
+.start_art{
+    height: 80%;
+    width: 40%;
+    
+}
+.trave_ver{
+    
+    height: 45%;
+    width: 4%;
+    background-color: crimson;
+    position: relative;
+    
+}
+.trave_hor{
+    
+    height: 4%;
+    width: 45%;
+    background-color: crimson;
+    position: relative;
+    
+    
+}
+
+.a{
+    top: 0%; 
+    left: 96%;
+}
+.b{
+    
+    top: 2%;
+    left: 0%;
+    
+}
+
+.text_developer{
+
+    font-size: 31px;
+    margin-bottom: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #dddddd
+}
+
+.text_name span{color: var(--maincolor);}
+.text_name{
+
+    color: #dddddd;
+    font-size: 65px;
+    margin-bottom: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.text_inf{
+
+    font-size: 21px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    color: var(--maincolor);
+}
+
+
+
+.vazio{
+    height: 900px;
+    width: 100%;
+    background-color: aqua;
+}
